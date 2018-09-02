@@ -1,0 +1,26 @@
+{
+  "name": "webpack-explore-commons-chunk-plugin",
+  "version": "1.0.0",
+  "description": "探索webpack1.x下commons-chunk-plugin打包问题",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "webpack-dll": "webpack -p --progress --config webpack.dll.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "react": "0.14.x",
+    "react-dom": "0.14.x"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.24.0",
+    "extract-text-webpack-plugin": "~1.0.1",
+    "style-loader": "^0.13.1",
+    "webpack": "1.13.1",
+    "webpack-dev-server": "^1.15.1"
+  }
+}

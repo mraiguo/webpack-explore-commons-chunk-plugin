@@ -1,0 +1,16 @@
+/node_modules
+/coverage
+.idea/
+/target
+/node
+/dist
+Thumbs.db
+*~
+~*
+*.diff
+*.patch
+*.bak
+*.log
+*.log.*
+npm-debug.log
+/*.iml
