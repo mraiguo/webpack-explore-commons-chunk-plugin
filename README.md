@@ -107,8 +107,8 @@ module.exports = {
 /******/ });
 ```
 果然，，受欢迎的chunk-3.js被打包进来了。
-
-总结： commonsCHunkPlugin插件抽取公共代码是针对对入库来进行的，单入口的时候强行指定没有效果，还会生成1kb左右的冗余文件，可以去除。
+总结：
+> commonsCHunkPlugin插件抽取公共代码是针对对入库来进行的，单入口的时候强行指定没有效果，还会生成1kb左右的冗余文件，可以去除。
 
 ---
 
@@ -116,7 +116,7 @@ module.exports = {
 
 既然commonsChunkPlugin不能满足我们提取单入口页面公共代码的需求，那么看下其他的。
 结合官网和其他文章，大概了解了这儿plugin作用；就是：  
-*当我们一个项目引入了多个较大的包以后，这些包本身并不会运行，我们也不会修改这些包的代码，但是每当我们修改了业务代码之后，这些包也会被重新打包。极大的浪费了时间，这时我们就需要使用这个工具预先把静态资源提前打包，以后修改源文件再打包时就不会打包这些静态资源文件了。*
+> 当我们一个项目引入了多个较大的包以后，这些包本身并不会运行，我们也不会修改这些包的代码，但是每当我们修改了业务代码之后，这些包也会被重新打包。极大的浪费了时间，这时我们就需要使用这个工具预先把静态资源提前打包，以后修改源文件再打包时就不会打包这些静态资源文件了。
 为了验证，加了一个webpack.dll.conf.js
 ```
 const path = require('path')
@@ -149,7 +149,7 @@ plugins: [
     })
 ]
 ```
-运行`webpack -p --progress --config webpack.dll.conf.js` 和 `webpack`得到：
+运行`webpack -p --progress --config webpack.dll.conf.js` 和 `webpack`得到:  
 ![image](https://raw.githubusercontent.com/mraiguo/image-respository/master/20180902211020.png)  
 和想的一样，把不常修改的包打包到dll.vender.js里面了
 
